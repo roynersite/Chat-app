@@ -18,15 +18,15 @@ import {
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-      apiKey: "AIzaSyDtcUBfzdSAmBrFg4hsxt_ITwY9DP7Siyc",
-      authDomain: "chatly-1d1be.firebaseapp.com",
-      databaseURL: "https://chatly-1d1be-default-rtdb.firebaseio.com",
-      projectId: "chatly-1d1be",
-      storageBucket: "chatly-1d1be.firebasestorage.app",
-      messagingSenderId: "908535725784",
-      appId: "1:908535725784:web:086bbf3c2d87e8c3a321ad",
-      measurementId: "G-4FD5C2YCLY"
-    };
+  apiKey: "AIzaSyDtcUBfzdSAmBrFg4hsxt_ITwY9DP7Siyc",
+  authDomain: "chatly-1d1be.firebaseapp.com",
+  databaseURL: "https://chatly-1d1be-default-rtdb.firebaseio.com",
+  projectId: "chatly-1d1be",
+  storageBucket: "chatly-1d1be.firebasestorage.app",
+  messagingSenderId: "908535725784",
+  appId: "1:908535725784:web:086bbf3c2d87e8c3a321ad",
+  measurementId: "G-4FD5C2YCLY"
+};
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
