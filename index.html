@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Web Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Iconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
 
+  <!-- Pantalla de Inicio de Sesión -->
+  <div id="login-screen" class="login-container">
+    <div class="login-card">
+      <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+      <h2>WhatsApp Web Clone</h2>
+      <p>Inicia sesión para chatear en tiempo real</p>
+      <button id="btn-login" class="btn-google">
+        <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+      </button>
+    </div>
+  </div>
+
+  <!-- Aplicación Principal (WhatsApp Web) -->
+  <div id="app-screen" class="app-container hidden">
+    <!-- Panel Izquierdo: Lista de Chats -->
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <img id="user-avatar" src="" alt="Avatar" class="avatar" />
+        <div class="header-actions">
+          <i class="fa-solid fa-circle-notch"></i>
+          <i class="fa-solid fa-message"></i>
+          <button id="btn-logout" title="Cerrar sesión"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+      </header>
+
+      <div class="search-bar">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Busca o empieza un chat" />
+        </div>
+      </div>
+
+      <!-- Salón Global de Chat -->
+      <div class="chat-list">
+        <div class="chat-item active">
+          <img src="https://ui-avatars.com/api/?name=Chat+General&background=128C7E&color=fff" class="avatar" alt="Global" />
+          <div class="chat-info">
+            <div class="chat-title">
+              <h4>Grupo General</h4>
+              <span class="time">Ahora</span>
+            </div>
+            <p class="last-message">Bienvenido al chat global</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Panel Derecho: Conversación -->
+    <main class="chat-window">
+      <header class="chat-header">
+        <div class="chat-header-info">
+          <img src="https://ui-avatars.com/api/?name=Chat+General&background=128C7E&color=fff" class="avatar" alt="Global" />
+          <div>
+            <h3>Grupo General</h3>
+            <span class="status">en línea</span>
+          </div>
+        </div>
+        <div class="chat-header-actions">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </header>
+
+      <!-- Área de Mensajes -->
+      <section id="messages-container" class="messages-container">
+        <!-- Los mensajes se cargarán dinámicamente aquí -->
+      </section>
+
+      <!-- Barra de Entrada de Mensaje -->
+      <footer class="chat-footer">
+        <i class="fa-regular fa-face-smile icon-btn"></i>
+        <i class="fa-solid fa-paperclip icon-btn"></i>
+        <form id="message-form" class="message-form">
+          <input type="text" id="message-input" placeholder="Escribe un mensaje aquí" autocomplete="off" required />
+          <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <i class="fa-solid fa-microphone icon-btn"></i>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Firebase SDK v10 (JS Modules) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
